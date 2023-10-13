@@ -10,7 +10,7 @@ def explore_data(data):
     st.subheader("월별 총 소비와 월별 평균 resample")
 
     # This is monthly spending and mean resampling on monthly basis
-    data_sliced = data['2022-06-11':'2023-10-03']
+    #data_sliced = data['2022-06-11':'2023-10-03']
 
     fig, ax = plt.subplots(figsize=(20, 6))
 

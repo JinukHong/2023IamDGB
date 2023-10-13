@@ -34,7 +34,7 @@ def simulation():
         r = r/1200.0
         return (np.power(1+r, n) -1)/(r*np.power(1+r, n))
 
-    @st.cache_data
+    
     def make_figure(results, offset=True):
         fig = make_subplots(specs=[[{"secondary_y": True}]])
 
@@ -76,7 +76,7 @@ def simulation():
 
         return fig
 
-    @st.cache_data
+    
     def scenario(rate, principle, payment, cash_left=0, offset_average=0):
         loan = Loan(principle, rate, 30*12)
         loan.offset = offset_average
@@ -88,7 +88,7 @@ def simulation():
                 break    
                 
 
-    @st.cache_data
+    
     def scenario2(rate, principle, income=0, start_cash=0, expenses=2500, reserve=1500, offset=True):
         loan = Loan(principle, rate, 30*12)
         if offset:
@@ -104,11 +104,11 @@ def simulation():
                 break    
         return results
 
-    @st.cache_data
+    
     def load_stamps():
         return pd.read_csv("stamps_korea.csv")
 
-    @st.cache_data
+    
     def calc_stamp_duty(state, house_cost):
         duty = 0
         info = ""
